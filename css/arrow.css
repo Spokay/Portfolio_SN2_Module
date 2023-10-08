@@ -1,24 +1,16 @@
 .arrow-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 20vh;
     position: absolute;
     bottom: 0;
 }
 
 .mouse_scroll {
-  display: flex;
     flex-direction: column;
   height: 200px;
 }
 .mouse_scroll > div:nth-child(2){
     transform: rotate(-90deg);
     height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 

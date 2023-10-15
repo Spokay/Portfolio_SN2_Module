@@ -24,8 +24,8 @@
   border-right: 2px solid white;
   border-bottom: 2px solid white;
   margin: 0 0 3px 4px;
-  width: 16px;
-  height: 16px;
+  width: 30px;
+  height: 30px;
 }
 
 
@@ -78,9 +78,9 @@
 }
 
 .mouse {
-  height: 68px;
-  width: 38px;
-  border-radius: 18px;
+  height: 110px;
+  width: 65px;
+  border-radius: 25px;
   transform: none;
   border: 2px solid white;
   top: 170px;
@@ -88,11 +88,11 @@
 
 .wheel {
   display: block;
-  margin: 5px auto;
+  margin: 7px auto;
   background: white;
   position: relative;
-  height: 7px;
-  width: 7px;
+  height: 10px;
+  width: 10px;
   border: 2px solid #fff;
   -webkit-border-radius: 8px;
           border-radius: 8px;

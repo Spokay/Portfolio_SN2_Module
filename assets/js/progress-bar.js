@@ -1,20 +1,25 @@
-let container = document.querySelector("#scroll-container");
-let landingPage = document.querySelector(".landing");
-let pages = document.querySelectorAll(".page");
-let range = document.querySelector(".range");
+let landingPage;
+let pages;
+let range;
 let rangeLabel = document.querySelector(".range__label");
-let totalWidth = 0;
+let totalWidth;
 
-pages.forEach((page) => totalWidth += page.offsetWidth.valueOf());
-
-range.style.width = totalWidth+"px";
-window.addEventListener("resize", function (){
+function loadData(){
+    landingPage = document.querySelector(".landing");
+    pages = document.querySelectorAll(".page");
+    range = document.querySelector(".range");
+    container = document.querySelector("#scroll-container");
+    totalWidth = 0;
+    pages.forEach((page) => totalWidth += page.offsetWidth.valueOf());
     range.style.width = totalWidth+"px";
+}
+window.addEventListener("load", function () {
+   loadData();
 });
 
-container.addEventListener("wheel", function (e) {
-    e.preventDefault();
-    container.scrollLeft += e.deltaY.valueOf();
+window.addEventListener("resize", function (){
+    loadData();
+    range.style.width = totalWidth+"px";
 });
 
 container.addEventListener("scroll", function (e) {
@@ -24,12 +29,7 @@ container.addEventListener("scroll", function (e) {
         range.style.setProperty("--p", percentValue.toString());
         rangeLabel.innerText = percentValue.toString().concat("%");
     }else if (percentValue < 100){
-        console.log(percentValue);
         range.style.setProperty("--p", percentValue.toString());
         rangeLabel.innerText = Math.round(percentValue).toString().concat("%");
     }
 });
-
-
-
-

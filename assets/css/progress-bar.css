@@ -1,16 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+footer{
+    height: 30px;
+}
 .progress-bar-container{
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    height: 30px;
+    display: flex;
 }
 .range {
   position: relative;
   background-color: #333;
   height: 30px;
-  font-family: "Orbitron", monospace;
-  transition: 1s width ease;
-  &:before {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.range::before {
     --width: calc(var(--p) * 1%);
     content: "";
     position: absolute;
@@ -20,27 +23,20 @@
     max-width: inherit;
     height: 100%;
     background-color: #287a1d;
-    transition: 1s width ease;
     z-index: 0;
     animation: load 0.5s forwards linear;
   }
 
-  &:after {
-    counter-reset: progress var(--p);
+.range::after {
+    /*counter-reset: progress var(--p);*/
     color: #000;
     position: absolute;
     left: 5%;
     top: 50%;
-    transform: translateY(-50%) skewX(-30deg);
-    transition: 1s width ease;
+    /*transform: translateY(-50%) skewX(-30deg);*/
     z-index: 1;
   }
 
-  &__label {
-    transform: skew(-30deg) translateY(-100%);
-    line-height: 1.5;
-  }
-}
 .range__label{
   position: fixed;
   display: flex;

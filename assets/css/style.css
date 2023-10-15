@@ -210,7 +210,7 @@ header .navbar .container-fluid{
 .form-control::placeholder{
     color:rgba(255, 255, 255, 0.8) !important;
 }
-.info-wrap .text{
+.info-wrap .text, .info-wrap p{
     color: white;
 }
 
